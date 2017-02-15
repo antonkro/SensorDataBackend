@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript">
+	function test(){
+		var xmlhttp = new XMLHttpRequest();
+		
+		xmlhttp.onreadystatechange= function(){
+			if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+				console.log("retrieved");
+			}
+		}
+		
+		var sensorName = "testSensorName";
+		var paramName = "testParameter";
+		var data = "testData"
+		var TimeStamp = 1000000;
+		
+		var objJSON = new Object();
+		objJSON["sensorName"] = sensorName;
+		objJSON["paramName"] = paramName;
+		objJSON["data"] = data;
+		objJSON["TimeStamp"] = TimeStamp;
+		
+		var strJSON = JSON.stringify(objJSON);
+		
+		console.log("Send strJSON...");
+		console.log(strJSON);
+		xmlhttp.open("POST", "service/push/singleSensor/singleParameter", true);
+		xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+		xmlhttp.send("strJSON="+strJSON);
+	}
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	/*JSON = {"sensorName":"<String>", "paramName":"<String>", "data":"<String>, "TimeStamp":"<int>(=Millisec from null)"}*/
+	<br>
+	strJSON = {"sensorName":"testSensorName","paramName":"testParameter","data":"testData","TimeStamp":1000000}	<br>
+
+	<input type="submit" value="JSON-req senden" onclick="test();"/>
+	
+
+	
+</body>
+</html>

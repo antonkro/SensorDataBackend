@@ -1,0 +1,122 @@
+div#navigation{
+	top: 0;
+	width: 454px;
+	left: 50%;
+	margin-left: -227px;
+	margin-top: 10px;
+	position: fixed;
+	z-index: 10;
+}
+	
+nav {
+	text-align: center;
+	background-color: #81BEF7;
+	border: 2px solid black;
+	border-radius: 20px 8px;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+	color: #ffffff;
+	display: block;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	list-style-type: none;
+	
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s; 
+}
+
+nav > ul > li > a > .caret {
+	border-top: 4px solid black;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	content: "";
+	display: inline-block;
+	height: 0;
+	width: 0;
+	vertical-align: middle;
+
+	-webkit-transition: color 0.1s linear;
+	-moz-transition: color 0.1s linear;
+	-o-transition: color 0.1s linear;
+	transition: color 0.1s linear; 
+}
+
+nav > ul > li > a {
+	color: #0B0B61;
+	display: block;
+	line-height: 56px;
+	padding: 0 20px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav > ul > li:hover {
+	background-color: #0489B1;
+}
+
+nav > ul > li:hover > a {
+	color: rgb( 255, 255, 255 );
+}
+
+nav > ul > li:hover > a > .caret {
+	border-top-color: rgb( 255, 255, 255 );
+}
+
+nav > ul > li > div {
+	background-color: #81BEF7;
+	border-top: 0;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-radius: 0 12px 12px 12px;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+	display: none;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	width: auto;
+	height: auto;
+	visibility: hidden;
+
+	-webkit-transiton: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-transition: opacity 0.2s;
+}
+
+nav > ul > li:hover > div {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+nav > ul > li > div ul > li {
+	display: block;
+	list-style-type: disc;
+	border-top: 1px solid #5aabf3;
+}
+
+nav > ul > li > div ul > li > a {
+	color: #0B0B61;
+	display: block;
+	padding: 12px 24px;
+	text-decoration: none;
+}
+
+nav > ul > li > div ul > li:hover > a {
+	background-color: #0489B1;
+	color: yellow;
+}

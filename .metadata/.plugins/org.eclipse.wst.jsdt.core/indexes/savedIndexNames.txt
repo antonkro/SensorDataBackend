@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/home/kro/Documents/Reutlingen/8_Semester/VS/project/SensorDataBackend/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2617519302.index
+1574254185.index
+994208954.index
+2055792589.index
+2618231060.index
+219198387.index

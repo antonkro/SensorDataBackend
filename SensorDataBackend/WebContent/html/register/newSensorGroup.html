@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+	<head>
+		<meta charset="utf-8"/>
+		<link href="../../css/nav.css" type="text/css" rel="stylesheet"/>
+		<link href="../../css/style.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="../../js/sensorgroups.js"></script>
+		<title>Sensordaten: Sensorgruppe hinzufügen</title>
+	</head>
+	<body>
+		<div id="navigation">
+			<nav>
+				<ul>
+					<li><a href="../../index.html">Startseite</a></li>
+					<li><a href="../overview.html">Sensoren</a>
+						<div>
+							<ul>
+								<li><a href="../sensor/sensors.html">Übersicht: Sensoren</a></li>
+								<li><a href="../sensor/findSensor.html">Sensor suchen</a></li>
+								<li><a href="../sensorGroup/sensorGroups.html">Übersicht: Sensorgruppen</a></li>
+								<li><a href="../sensorGroup/findSensorGroup.html">Sensorgruppe suchen</a></li>
+							</ul>
+						</div>
+					<li>
+					<li><a href="../register.html">Hinzufügen</a>
+						<div>
+							<ul>
+								<li><a href="newSensor.html">Neuer Sensor</a></li>
+								<li><a href="newSensorGroup.html">Neue Sensorgruppe</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="../edit.html">Bearbeiten</a>
+						<div>
+							<ul>
+								<li><a href="../edit/sensor.html">Sensor bearbeiten</a></li>
+								<li><a href="../edit/notConfiguredSensors.html">Übersicht unvollständiger Sensoren</a></li>
+								<li><a href="../edit/sensorGroup.html">Sensorgruppe bearbeiten</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="content">
+			<a class="back" href="javascript:history.back();">Zurück</a> 	
+			<hr>
+			<h1 class="Padavan">Sensorgruppe(n) hinzufügen</h1>
+			<hr>
+			
+			<div id="payload">
+				<h2 class="server">Wie sollen die neuen Sensorgruppen heißen?</h2>
+				<form id="addSensorGroupsForm" method="POST" action="../../service/newSensorGroups">
+					<input id="name" name="name" class="addText" type="text" placeholder="Gruppenname" required/>
+					<input class="addClick" type="button" value="Gruppe hinzufügen" onclick="addSensorGroupInput();"/>
+					<input class="addSubmit" type="submit" value="Abschicken"/>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

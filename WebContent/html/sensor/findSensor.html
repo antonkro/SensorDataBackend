@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+	<head>
+		<meta charset="utf-8"/>
+		<link href="../../css/nav.css" type="text/css" rel="stylesheet"/>
+		<link href="../../css/style.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="../../js/sensors.js"></script>
+		<title>Sensordaten: Sensor suchen</title>
+	</head>
+	<body>
+		<div id="navigation">
+			<nav>
+				<ul>
+					<li><a href="../../index.html">Startseite</a></li>
+					<li><a href="../overview.html">Sensoren</a>
+						<div>
+							<ul>
+								<li><a href="sensors.html">Übersicht: Sensoren</a></li>
+								<li><a href="findSensor.html">Sensor suchen</a></li>
+								<li><a href="../sensorGroup/sensorGroups.html">Übersicht: Sensorgruppen</a></li>
+								<li><a href="../sensorGroup/findSensorGroup.html">Sensorgruppe suchen</a></li>
+							</ul>
+						</div>
+					<li>
+					<li><a href="../register.html">Hinzufügen</a>
+						<div>
+							<ul>
+								<li><a href="../register/newSensor.html">Neuer Sensor</a></li>
+								<li><a href="../register/newSensorGroup.html">Neue Sensorgruppe</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="../edit.html">Bearbeiten</a>
+						<div>
+							<ul>
+								<li><a href="../edit/sensor.html">Sensor bearbeiten</a></li>
+								<li><a href="../edit/notConfiguredSensors.html">Übersicht unvollständiger Sensoren</a></li>
+								<li><a href="../edit/sensorGroup.html">Sensorgruppe bearbeiten</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="content">	
+			<a class="back" href="javascript:history.back();">Zurück</a> 
+			<hr/>
+			<h1 class="Padavan">Sensor Suche</h1>
+			<hr/>
+			<h2 class="server">Nach welchen Sensoren soll ich suchen?</h2>
+
+			<input class="search" id="sensorNameInput" type="text" name="search" placeholder="Sensorname" required/>
+			<input type="submit" value="Suchen" onclick="searchSensor(); addLoadIcon();"/>
+			
+			<div id="payload"></div>
+		</div>
+		
+	</body>
+</html>
